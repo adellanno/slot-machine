@@ -1,0 +1,23 @@
+.container {
+  text-align: center;
+}
+
+.spin-button {
+  text-align: center;
+}
+
+.fruits {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: inline-block;
+}
+
+.row1 {
+  display: inline-block;
+}
+
+.notifications {
+  color: red;
+  text-align: center;
+}
