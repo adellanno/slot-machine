@@ -18,6 +18,17 @@
 }
 
 .notifications {
-  color: red;
   text-align: center;
+}
+
+.images {
+  display: block;
+}
+
+
+.jSlots-wrapper {
+    overflow: hidden; /* to hide the magic */
+    height: 20px; /* whatever the height of your list items are */
+    display: inline-block; /* to size width correctly, can use float too, or width*/
+    border: 1px solid #999;
 }

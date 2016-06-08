@@ -2,25 +2,27 @@
 <html>
 <head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="jquery.jSlots.js" charset="utf-8"></script>
+  <script src="jquery.easing.1.3.js" charset="utf-8"></script>
   <script type="text/javascript" src="javascript.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
   <div class="container">
     <div>
-      <div class="fruits" id="fruit1"></div>
-      <div class="fruits" id="fruit2"></div>
-      <div class="fruits" id="fruit3"></div>
+      <img class="fruits" id="fruit1" src="images/apple.jpg" />
+      <img class="fruits" id="fruit2" src="images/orange.jpg" />
+      <img class="fruits" id="fruit3" src="images/lemon.jpg"/>
     </div>
     <div>
-      <div class="row1" id="decrease-money"><button>-</button></div>
       <div class="row1" id="purse"></div>
-      <div class="row1" id="increase-money"><button>+</button></div>
     </div>
     <div class="spin-button">
-      <div><button id="spin-button">spin</button></div>
+      <button id="spin-button">spin</button>
     </div>
-    <h2 class="notifications"></h1>
+    <div>
+      <h2 class="notifications"></h2>
+    </div>
   </div>
 </body>
 </html>
