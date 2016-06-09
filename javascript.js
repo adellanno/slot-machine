@@ -24,9 +24,11 @@ var fruitChooser = function(fruitArray) {
 };
 
 var fruitSelection = ["apple", "orange", "lemon"];
-var fruitOne = "go"
-var fruitTwo = "go"
-var fruitThree = "go"
+var fruitOne = "";
+var fruitTwo = "";
+var fruitThree = "";
+var myInterval = '';
+
 
 function increaseMoney() {
   userMoney += 5;
@@ -41,8 +43,6 @@ function decreaseMoney() {
 
 
 function changeImages() {
-  console.log(spinCounter)
-
   spinCounter -= 1;
   fruitOne = fruitChooser(fruitSelection);
   fruitTwo = fruitChooser(fruitSelection);
@@ -54,6 +54,7 @@ function changeImages() {
   document.getElementById('fruit3').src =
   'images/' + fruitThree + '.jpg';
   if(spinCounter <= 0) {
+    enableButton();
     clearInterval(myInterval)
     spinCounter = 7;
     checkCombination();
@@ -61,26 +62,25 @@ function changeImages() {
 }
 
 function checkCombination() {
-  console.log("hello")
   if ((fruitOne == fruitTwo) &&
       (fruitOne == fruitThree)) {
         $('.notifications').html("You WIN!!").css("color", 'red')
         increaseMoney();
       } else {
-        $('.notifications').html("try again..").css("color", "blue")
+        $('.notifications').html("You lose...try again...?").css("color", "blue")
       }
 }
-var myInterval = '';
 
 function startSpinning() {
-  console.log(spinCounter)
-   myInterval = setInterval(changeImages, 100);
+  $('.notifications').html("....").css("color", "green")
+  disableButton();
+  myInterval = setInterval(changeImages, 100);
 }
 
-//animation stuff
+function enableButton() {
+  $('#spin-button').prop('disabled', false);
+}
 
-
-
-
-
-// var fruitSelection = ["Apple", "Orange", "Lemon"];
+function disableButton() {
+  $('#spin-button').prop('disabled', true);
+}
